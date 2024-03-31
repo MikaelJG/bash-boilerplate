@@ -9,9 +9,20 @@
 # Boilerplate for creating a simple bash script with some basic strictness
 # checks and help features.
 #
-# Usage:
+#
+# Bash Boilerplate: https://github.com/xwmx/bash-boilerplate
+# Copyright (c) 2015 William Melody • hi@williammelody.com
+
+#
+# Usage: #######################################################################
+#
+#
 #   bash-simple <options>...
 #
+# 
+# Dependencies #######################################################################
+#
+# 
 # Depends on:
 #  list
 #  of
@@ -20,22 +31,26 @@
 #  in
 #  environment
 #
-# Bash Boilerplate: https://github.com/xwmx/bash-boilerplate
 #
-# Copyright (c) 2015 William Melody • hi@williammelody.com
-
-# Notes #######################################################################
-
+# Bash good practices #######################################################################
+#
 # Extensive descriptions are included for easy reference.
 #
-# Explicitness and clarity are generally preferable, especially since bash can
+# Explicitness and clarity are generally preferable, since bash can
 # be difficult to read. This leads to noisier, longer code, but should be
-# easier to maintain. As a result, some general design preferences:
+# easier to maintain.
 #
 # - Use leading underscores on internal variable and function names in order
-#   to avoid name collisions. For unintentionally global variables defined
+#   to avoid name collisions. 
+#
+#        
+#       _ME="$(basename "${0}")"
+#
+#
+# - For unintentionally global variables defined
 #   without `local`, such as those defined outside of a function or
 #   automatically through a `for` loop, prefix with double underscores.
+#
 # - Always use braces when referencing variables, preferring `${NAME}` instead
 #   of `$NAME`. Braces are only required for variable references in some cases,
 #   but the cognitive overhead involved in keeping track of which cases require
