@@ -55,14 +55,40 @@
 #   of `$NAME`. Braces are only required for variable references in some cases,
 #   but the cognitive overhead involved in keeping track of which cases require
 #   braces can be reduced by simply always using them.
+#
+#
+#
+#
+#   _NAME="Justin"
+#   
+#   printf "Hello ${_NAME}!"
+#
+#
+#
 # - Prefer `printf` over `echo`. For more information, see:
 #   http://unix.stackexchange.com/a/65819
+#
+#
+#
 # - Prefer `$_explicit_variable_name` over names like `$var`.
+#
+#
+# 
+#
 # - Use the `#!/usr/bin/env bash` shebang in order to run the preferred
 #   Bash version rather than hard-coding a `bash` executable path.
+# 
+# 
+# 
 # - Prefer splitting statements across multiple lines rather than writing
 #   one-liners.
+#
+#
+#
 # - Group related code into sections with large, easily scannable headers.
+#
+#
+#
 # - Describe behavior in comments as much as possible, assuming the reader is
 #   a programmer familiar with the shell, but not necessarily experienced
 #   writing shell scripts.
@@ -84,7 +110,9 @@
 #
 # ${parameter:-word}
 #   If parameter is unset or null, the expansion of word is substituted.
-#   Otherwise, the value of parameter is substituted. In other words, "word"
+#   Otherwise, the value of parameter is substituted.
+
+#   In other words, "word"
 #   acts as a default value when the value of "$parameter" is blank. If "word"
 #   is not present, then the default is blank (essentially an empty string).
 #
